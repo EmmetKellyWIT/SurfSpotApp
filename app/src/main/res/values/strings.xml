@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SurfSpot</string>
+    <string name="button_addSurfSpot">Add SurfSpot</string>
+    <string name="button_saveSurfSpot">Save SurfSpot</string>
+    <string name="button_addImage"> Add Image </string>
+    <string name="change_surfspot_image">Change surfspot image</string>
+    <string name="hint_surfspotTitle">SurfSpot Title</string>
+    <string name="hint_surfspotDescription">SurfSpot Description</string>
+    <string name="hint_surfspotWarnings">SurfSpot Warnings</string>
+    <string name="menu_addSurfSpot">Add</string>
+    <string name="menu_cancelSurfSpot">Cancel</string>
+    <string name="message_enter_title">Please enter a title</string>
+    <string name="select_surfspot_image">Select surfspot image</string>
+    <string name="menu_deleteSurfSpot">Delete</string>
+</resources>

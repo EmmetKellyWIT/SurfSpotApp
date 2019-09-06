@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.surfspotapp.activities.SurfSpotActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBarLayout"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btnAdd"
+                        android:layout_width="174dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="52dp"
+                        android:background="@color/colorAccent"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:stateListAnimator="@null"
+                        android:text="@string/button_addSurfSpot"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/chooseImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorAccent"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/button_addImage"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/surfspotImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="205dp"
+                        app:layout_constraintBottom_toTopOf="@+id/surfspotWarnings"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        tools:layout_editor_absoluteX="8dp" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/surfspotWarnings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_marginBottom="24dp"
+                        android:hint="@string/hint_surfspotWarnings"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/chooseImage"
+                        tools:layout_editor_absoluteX="10dp" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/surfspotTitle"
+                        android:layout_width="392dp"
+                        android:layout_height="53dp"
+                        android:layout_margin="8dp"
+                        android:hint="@string/hint_surfspotTitle"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/surfspotDescription"
+                        android:layout_width="396dp"
+                        android:layout_height="144dp"
+                        android:layout_margin="8dp"
+                        android:layout_marginStart="16dp"
+                        android:hint="@string/hint_surfspotDescription"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/surfspotImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/surfspotTitle"
+                        app:layout_constraintVertical_bias="0.478" />
+                </android.support.constraint.ConstraintLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:fitsSystemWindows="true"
+            app:elevation="0dip"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@color/colorPrimary" />
+        </android.support.design.widget.AppBarLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
